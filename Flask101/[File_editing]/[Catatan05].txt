@@ -1,0 +1,4 @@
+Link video: youtube.com/watch?v=44PvX0Yv368
+
+In this chapter we just make the directory more neat, in order to make a databases.
+All the code is separated by it's function, in the end, we just have a package and a run.py file for run the package
