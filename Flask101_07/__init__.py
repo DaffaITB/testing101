@@ -13,4 +13,4 @@ login_manager = LoginManager(app)
 login_manager.login_view = "masuk"
 login_manager.login_message_category = "info"
 
-from Flask101 import routes
+from Flask101_07 import routes
