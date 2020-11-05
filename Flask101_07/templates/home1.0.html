@@ -1,0 +1,16 @@
+{% extends "[mother_templates_v1].html" %}
+
+{% block body %}
+    {% for postingan in P %}
+        <article class="media content-section">
+            <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ postingan.Nama }}</a>
+                <small class="text-muted">{{ postingan.Tanggal }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ postingan.Judul }}</a></h2>
+            <p class="article-content">{{ postingan.Isi }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock body %}
