@@ -2,9 +2,9 @@ import os
 import secrets
 from PIL import Image
 from flask import Flask, render_template, url_for, flash, redirect, request
-from Flask101 import app, db, bcrypt, login_manager
-from Flask101.forms import form_registrasi, form_login, form_perbaruiakun
-from Flask101.models import user, post
+from Flask101_07 import app, db, bcrypt, login_manager
+from Flask101_07.forms import form_registrasi, form_login, form_perbaruiakun
+from Flask101_07.models import user, post
 from flask_login import login_user, logout_user, current_user, login_required
 
 data_post = [
