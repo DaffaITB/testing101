@@ -70,4 +70,5 @@ def keluar():
 @app.route("/akun")
 @login_required
 def akun():
-    return render_template("account1.0.html", title="akun")
+    foto_user = url_for("static", filename="gambar/foto user/" + current_user.profile_picture)
+    return render_template("account1.2.html", title="akun", fotonya_user=foto_user)
