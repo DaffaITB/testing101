@@ -43,6 +43,7 @@ def daftar():
         db.session.add(pengguna_baru)
         db.session.commit()
         flash(f"Akun {daftar.username.data} berhasil dibuat! Silakan masuk untuk lanjut.", "success")
+        logout_user()
         return redirect(url_for("masuk"))
     return render_template("register1.0.html", title="daftar", form = daftar)
 
