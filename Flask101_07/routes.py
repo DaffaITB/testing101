@@ -56,7 +56,7 @@ def masuk():
         if user_tersedia and bcrypt.check_password_hash(user_tersedia.password, masuk.password.data):
             login_user(user_tersedia, remember=masuk.remember_account.data)
             lanjut = request.args.get("next")
-            flash(f"Akun {current_user.username} berhasil dibuat! Silakan masuk untuk lanjut.", "success")
+            flash(f"Selamat datang kembali {current_user.username}!", "success")
             return redirect(lanjut) if lanjut else redirect(url_for("beranda"))
         else:
             flash("Tidak dapat masuk, silakan cek kembali email dan password Anda!", "danger")
