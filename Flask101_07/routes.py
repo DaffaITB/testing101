@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
-from Flask101_07 import app, db, bcrypt, login_manager
-from Flask101_07.forms import form_registrasi, form_login
-from Flask101_07.models import user, post
+from Flask101 import app, db, bcrypt, login_manager
+from Flask101.forms import form_registrasi, form_login
+from Flask101.models import user, post
 from flask_login import login_user, logout_user, current_user, login_required
 
 data_post = [
@@ -56,6 +56,7 @@ def masuk():
         if user_tersedia and bcrypt.check_password_hash(user_tersedia.password, masuk.password.data):
             login_user(user_tersedia, remember=masuk.remember_account.data)
             lanjut = request.args.get("next")
+            flash(f"Akun {current_user.username} berhasil dibuat! Silakan masuk untuk lanjut.", "success")
             return redirect(lanjut) if lanjut else redirect(url_for("beranda"))
         else:
             flash("Tidak dapat masuk, silakan cek kembali email dan password Anda!", "danger")
